@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SpatialStructure id="pWI-Y7pu8kSLLK1DpsqYrw" icon="SpatialStructure" bbVersion="0" version="11" modelLicences="" cs="C740F26B">
+  <Creation createdAt="5247997167964922686" createdBy="ZTMBL" creationMode="New" origin="MoBi" version="6.4.1" />
+  <GlobalMoleculeDependentProperties id="S8wvLIYtKkivNlZDqJCEqg" name="MoleculeProperties" mode="Logical" containerType="Molecule" />
+  <TopContainers>
+    <Container id="1_Q-TnehDUiqyIajqjAFcQ" name="Tumor" icon="CONTAINER" mode="Logical" containerType="Organ">
+      <Tags>
+        <Tag value="Tumor" />
+      </Tags>
+      <Children>
+        <Container id="2aPBxrLA8ECv98s-FOya1w" name="MoleculeProperties" mode="Logical" containerType="Other" />
+        <Parameter id="KQySRpgPTk63D_5qtL43qA" name="lambda_0" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" value="0.00015">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="wOXSUr4xg06DpZwZ5B8Kyg" name="lambda_1" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" value="0.0002">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="aE2hddFpVUytYPm8roIgAQ" name="w_0" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" value="0.025" displayUnit="kg">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="UKTHauhme0i6rGwDSXs97g" name="k1" icon="Parameter" persistable="0" isFixedValue="0" dim="Dimensionless per time" quantityType="Parameter" negativeValuesAllowed="1" value="0.01" displayUnit="/min">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="1J3gTXZ2_UuM0UZ-YX1ajA" name="k2" icon="Parameter" persistable="0" isFixedValue="0" quantityType="Parameter" negativeValuesAllowed="1" value="0.2">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="BFHHVNsn5k25vxoyfpfKlQ" name="x2" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" rHSFormula="3uhyZMODQEiMMm1saLteYg" value="0" displayUnit="kg">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="pXPXko76nkm9z2RP8CJKGg" name="x3" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" rHSFormula="-xN6Z2XH90a1IiYsiPkTuA" value="0" displayUnit="kg">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="KpqvoKHIhEaHAzi1qKucog" name="x4" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" rHSFormula="NjHtK4f3CEqVUCWY1aqF-w" value="0" displayUnit="kg">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="jR6lX3er_kucvgDB6tudmg" name="w" icon="Parameter" persistable="1" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" formula="PXf7pykowk--fhuDSbFunQ" displayUnit="kg">
+          <Info flag="2" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="UkLVCj4nSk2iU2lWpSxlNw" name="x1" icon="Parameter" persistable="0" isFixedValue="0" dim="Mass" quantityType="Parameter" negativeValuesAllowed="1" formula="IO5uvKgIhkiARCVR5ol-kw" rHSFormula="y-HLaLE7cUS7EsOklJw0bw" displayUnit="kg">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+        <Parameter id="bdQ3fHSsV06sQ3cDTS5XlA" name="concentration_toxophore" icon="Parameter" persistable="1" isFixedValue="0" dim="Concentration (molar)" quantityType="Parameter" negativeValuesAllowed="1" formula="SrUKFBgFXk-z7AJbbZZRkw" displayUnit="µmol/l">
+          <Info flag="10" seq="1" ref="0" bb="2" group="143" />
+          <Origin />
+        </Parameter>
+      </Children>
+    </Container>
+  </TopContainers>
+  <NeighborhoodsContainer id="Vr2Yp5JWCEyp7czzvyGnTg" name="Neighborhoods" mode="Logical" containerType="Other" />
+  <FormulaCache>
+    <Formulas>
+      <Formula id="PXf7pykowk--fhuDSbFunQ" name="sum_of_weights" dim="Mass" formula="x1+x2+x3+x4">
+        <Paths>
+          <Path path="0" as="1" />
+          <Path path="2" as="3" />
+          <Path path="4" as="5" />
+          <Path path="6" as="7" />
+        </Paths>
+      </Formula>
+      <Formula id="3uhyZMODQEiMMm1saLteYg" name="dx2_dt" dim="Mass per time" formula="k2*concentration_toxophore*x1-k1*x2">
+        <Paths>
+          <Path path="0" as="1" />
+          <Path path="2" as="3" />
+          <Path path="8" as="9" />
+          <Path path="10" as="11" />
+          <Path path="12" as="13" />
+        </Paths>
+      </Formula>
+      <Formula id="-xN6Z2XH90a1IiYsiPkTuA" name="dx3_dt" dim="Mass per time" formula="k1*(x2-x3)">
+        <Paths>
+          <Path path="8" as="9" />
+          <Path path="2" as="3" />
+          <Path path="4" as="5" />
+        </Paths>
+      </Formula>
+      <Formula id="NjHtK4f3CEqVUCWY1aqF-w" name="dx4_dt" dim="Mass per time" formula="k1*(x3-x4)">
+        <Paths>
+          <Path path="8" as="9" />
+          <Path path="4" as="5" />
+          <Path path="6" as="7" />
+        </Paths>
+      </Formula>
+      <Formula id="IO5uvKgIhkiARCVR5ol-kw" name="start_value_tumor" dim="Mass" formula="w_0">
+        <Paths>
+          <Path path="14" as="15" />
+        </Paths>
+      </Formula>
+      <Formula id="y-HLaLE7cUS7EsOklJw0bw" name="dx1_dt" dim="Mass per time" formula="2*lambda_0*lambda_1*x1*x1/(lambda_1+2*lambda_0*x1)/w-k2*concentration_toxophore*x1">
+        <Paths>
+          <Path path="16" as="17" />
+          <Path path="18" as="19" />
+          <Path path="14" as="15" />
+          <Path path="0" as="1" />
+          <Path path="8" as="9" />
+          <Path path="10" as="11" />
+          <Path path="12" as="13" />
+          <Path path="20" as="21" />
+        </Paths>
+      </Formula>
+      <Formula id="SrUKFBgFXk-z7AJbbZZRkw" name="link_to_concentration" dim="Concentration (molar)" formula="Concentration">
+        <Paths>
+          <Path path="22" as="23" dim="24" />
+        </Paths>
+      </Formula>
+    </Formulas>
+    <StringMap>
+      <Map s="Organism|Tumor|x1" id="0" />
+      <Map s="x1" id="1" />
+      <Map s="Organism|Tumor|x2" id="2" />
+      <Map s="x2" id="3" />
+      <Map s="Organism|Tumor|x3" id="4" />
+      <Map s="x3" id="5" />
+      <Map s="Organism|Tumor|x4" id="6" />
+      <Map s="x4" id="7" />
+      <Map s="Organism|Tumor|k1" id="8" />
+      <Map s="k1" id="9" />
+      <Map s="Organism|Tumor|k2" id="10" />
+      <Map s="k2" id="11" />
+      <Map s="Organism|Tumor|concentration_toxophore" id="12" />
+      <Map s="concentration_toxophore" id="13" />
+      <Map s="Organism|Tumor|w_0" id="14" />
+      <Map s="w_0" id="15" />
+      <Map s="Organism|Tumor|lambda_1" id="16" />
+      <Map s="lambda_1" id="17" />
+      <Map s="Organism|Tumor|lambda_0" id="18" />
+      <Map s="lambda_0" id="19" />
+      <Map s="Organism|Tumor|w" id="20" />
+      <Map s="w" id="21" />
+      <Map s="Organism|Liver|Periportal|Intracellular|Toxophore|Concentration" id="22" />
+      <Map s="Concentration" id="23" />
+      <Map s="Concentration (molar)" id="24" />
+    </StringMap>
+  </FormulaCache>
+</SpatialStructure>
